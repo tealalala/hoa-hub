@@ -1,0 +1,2 @@
+class Bylaw < ApplicationRecord
+end

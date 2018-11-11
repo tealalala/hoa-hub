@@ -1,0 +1,2 @@
+class ActionMadeByAddressUser < ApplicationRecord
+end

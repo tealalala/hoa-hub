@@ -1,0 +1,2 @@
+class GroupId < ApplicationRecord
+end

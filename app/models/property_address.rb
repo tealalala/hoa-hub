@@ -1,0 +1,2 @@
+class PropertyAddress < ApplicationRecord
+end

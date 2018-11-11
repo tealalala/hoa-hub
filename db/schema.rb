@@ -1,0 +1,124 @@
+# This file is auto-generated from the current state of the database. Instead
+# of editing this file, please use the migrations feature of Active Record to
+# incrementally modify your database, and then regenerate this schema definition.
+#
+# Note that this schema.rb definition is the authoritative source for your
+# database schema. If you need to create the application database on another
+# system, you should be using db:schema:load, not running all the migrations
+# from scratch. The latter is a flawed and unsustainable approach (the more migrations
+# you'll amass, the slower it'll run and the greater likelihood for issues).
+#
+# It's strongly recommended that you check this file into your version control system.
+
+ActiveRecord::Schema.define(version: 2018_11_11_204529) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "action_made_by_address_users", force: :cascade do |t|
+    t.string "category"
+    t.string "description"
+    t.string "status"
+    t.date "date_open"
+    t.date "date_closed"
+    t.boolean "architecture_change_is_true?", default: false
+    t.boolean "violation_is_true?", default: false
+    t.boolean "vote_is_true?", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "property_address_id"
+    t.integer "bylaw_id"
+    t.integer "ccr_id"
+  end
+
+  create_table "add_foreign_keys_to_tables", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "association_roles", force: :cascade do |t|
+    t.string "status"
+    t.string "start_date"
+    t.string "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "association_id"
+    t.integer "user_id"
+    t.integer "role_id"
+    t.integer "group_id"
+  end
+
+  create_table "associations", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.integer "zip_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bylaws", force: :cascade do |t|
+    t.string "section"
+    t.string "description"
+    t.boolean "status", default: false
+    t.date "date_proposed"
+    t.date "date_approved"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "assocation_id"
+    t.integer "user_id"
+  end
+
+  create_table "ccrs", force: :cascade do |t|
+    t.string "section"
+    t.string "description"
+    t.date "date_proposed"
+    t.date "date_approved"
+    t.boolean "status", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "assocation_id"
+    t.integer "user_id"
+  end
+
+  create_table "group_ids", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "property_addresses", force: :cascade do |t|
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.integer "zip_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "association_id"
+    t.integer "user_id"
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "middle_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "password_digest"
+    t.boolean "status", default: false
+    t.boolean "is_elected?", default: false
+    t.boolean "is_admin?", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "association_role_id"
+    t.integer "property_address_id"
+  end
+
+end
