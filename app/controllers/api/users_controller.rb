@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.order("id ASC").all
     render 'index.json.jbuilder'
   end
 
@@ -21,16 +21,27 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.first
+    @user = User.find_by(id: params[:id])
     render 'show.json.jbuilder'
   end
 
   def update
-
+    @user = User.find_by(id: params[:id])
+    @user.update(
+      first_name: params[:first_name],
+      middle_name: params[:middle_name],
+      last_name: params[:last_name],
+      email: params[:email],
+      association_role_id: params[:association_role_id],
+      property_address_id: params[:property_address_id]
+    )
+    @user.save
+    render 'show.json.jbuilder'
   end
 
   def destroy
-
+    @user = User.find_by(id: params[:id])
+    @user.destroy
+    render 'destroy.json.jbuilder'
   end
-
 end

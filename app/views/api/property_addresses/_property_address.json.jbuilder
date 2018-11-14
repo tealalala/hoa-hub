@@ -1,0 +1,9 @@
+json.id property_address.id
+json.address property_address.address
+json.city property_address.city
+json.state property_address.state
+json.zip_code property_address.zip_code
+json.created_at property_address.created_at
+json.updated_at property_address.updated_at
+json.association_id property_address.association_id
+json.user_id property_address.user_id
