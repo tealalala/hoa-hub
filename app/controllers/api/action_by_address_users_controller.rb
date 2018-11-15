@@ -1,11 +1,11 @@
-class Api::ActionMadeByAddressUsersController < ApplicationController
+class Api::ActionByAddressUsersController < ApplicationController
   def index
-    @action_by_users = ActionMadeByAddressUser.order("id ASC").all
+    @action_by_users = ActionByAddressUser.order("id ASC").all
     render 'index.json.jbuilder'
   end
 
   def create
-    @action_by_user = ActionMadeByAddressUser.new(
+    @action_by_user = ActionByAddressUser.new(
       category: params[:category],
       description: params[:description],
       status: params[:status],
@@ -24,12 +24,12 @@ class Api::ActionMadeByAddressUsersController < ApplicationController
   end
 
   def show
-    @action_by_user = ActionMadeByAddressUser.find_by(id: params[:id])
+    @action_by_user = ActionByAddressUser.find_by(id: params[:id])
     render 'show.json.jbuilder'
   end
 
   def update
-    @action_by_user = ActionMadeByAddressUser.find_by(id: params[:id])
+    @action_by_user = ActionByAddressUser.find_by(id: params[:id])
     @action_by_user.update(
       category: params[:category],
       description: params[:description],
@@ -49,7 +49,7 @@ class Api::ActionMadeByAddressUsersController < ApplicationController
   end
 
   def destroy
-    @action_by_user = ActionMadeByAddressUser.find_by(id: params[:id])
+    @action_by_user = ActionByAddressUser.find_by(id: params[:id])
     @action_by_user.destroy
     render 'destroy.json.jbuilder'
   end

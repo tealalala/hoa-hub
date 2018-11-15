@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # verb "/urls" => "namespace/controllers#action"
   namespace :api do
     resources :users, except: [:new, :edit]
-    resources :action_made_by_address_users
+    resources :action_by_address_users
     resources :association_managements
     resources :association_roles
     resources :associations
