@@ -8,8 +8,8 @@ class Api::CcrsController < ApplicationController
     @ccr = Ccr.new(
       section: params[:section],
       description: params[:description],
-      date_proposed: params[:date_proposed],
-      date_approved: params[:date_approved],
+      date_proposed: Date.parse(params[:date_proposed]),
+      date_approved: Date.parse(params[:date_approved]),
       status: false,
       association_id: params[:association_id],
       user_id: params[:user_id]
@@ -28,8 +28,8 @@ class Api::CcrsController < ApplicationController
     @ccr.update(
       section: params[:section],
       description: params[:description],
-      date_proposed: params[:date_proposed],
-      date_approved: params[:date_approved],
+      date_proposed: Date.parse(params[:date_proposed]),
+      date_approved: Date.parse(params[:date_approved]),
       status: false,
       association_id: params[:association_id],
       user_id: params[:user_id]

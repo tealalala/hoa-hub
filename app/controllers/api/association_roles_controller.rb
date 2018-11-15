@@ -7,8 +7,8 @@ class Api::AssociationRolesController < ApplicationController
   def create
     @association_role = AssociationRole.new(
       status: false,
-      start_date: params[:start_date],
-      end_date: params[:end_date],
+      start_date: Date.parse(params[:start_date]),
+      end_date: Date.parse(params[:end_date]),
       association_id: params[:association_id],
       user_id: params[:user_id],
       role_id: params[:role_id],
@@ -27,8 +27,8 @@ class Api::AssociationRolesController < ApplicationController
     @association_role = AssociationRole.find_by(id: params[:id])
     @association_role.update(
       status: params[:status],
-      start_date: params[:start_date],
-      end_date: params[:end_date],
+      start_date: Date.parse(params[:start_date]),
+      end_date: Date.parse(params[:end_date]),
       association_id: params[:association_id],
       user_id: params[:user_id],
       role_id: params[:role_id],

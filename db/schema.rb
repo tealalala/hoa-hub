@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_15_003023) do
+ActiveRecord::Schema.define(version: 2018_11_15_014640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,15 +43,15 @@ ActiveRecord::Schema.define(version: 2018_11_15_003023) do
   end
 
   create_table "association_roles", force: :cascade do |t|
-    t.string "status"
-    t.string "start_date"
-    t.string "end_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "association_management_id"
     t.integer "user_id"
+    t.integer "association_id"
     t.integer "role_id"
     t.integer "group_id"
+    t.boolean "status"
+    t.date "start_date"
+    t.date "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "bylaws", force: :cascade do |t|

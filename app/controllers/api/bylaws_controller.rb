@@ -9,8 +9,8 @@ class Api::BylawsController < ApplicationController
       section: params[:section],
       description: params[:description],
       status: false,
-      date_proposed: params[:date_proposed],
-      date_approved: params[:date_approved],
+      date_proposed: Date.parse(params[:date_proposed]),
+      date_approved: Date.parse(params[:date_approved]),
       association_id: params[:association_id],
       user_id: params[:user_id]
     )
@@ -29,8 +29,8 @@ class Api::BylawsController < ApplicationController
       section: params[:section],
       description: params[:description],
       status: false,
-      date_proposed: params[:date_proposed],
-      date_approved: params[:date_approved],
+      date_proposed: Date.parse(params[:date_proposed]),
+      date_approved: Date.parse(params[:date_approved]),
       association_id: params[:association_id],
       user_id: params[:user_id]
     )
