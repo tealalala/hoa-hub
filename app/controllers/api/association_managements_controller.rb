@@ -1,4 +1,4 @@
-class Api::AssociationManagementManagementsController < ApplicationController
+class Api::AssociationManagementsController < ApplicationController
   def index
     @association_managements = AssociationManagement.order("id ASC").all
     render 'index.json.jbuilder'
