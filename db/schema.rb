@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_15_014640) do
+ActiveRecord::Schema.define(version: 2018_11_15_025216) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "action_made_by_address_users", force: :cascade do |t|
+  create_table "action_by_address_users", force: :cascade do |t|
     t.string "category"
     t.string "description"
     t.string "status"

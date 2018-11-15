@@ -1,7 +1,7 @@
 class ActionMadeByAddressUser < ApplicationRecord
   # Database Relationships
-  belongs_to :bylaw
-  belongs_to :ccr
+  belongs_to :bylaw, optional: true
+  belongs_to :ccr, optional: true
   belongs_to :property_address
   belongs_to :user
 
