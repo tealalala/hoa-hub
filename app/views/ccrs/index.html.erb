@@ -1,0 +1,12 @@
+<h1>CCRS Index</h1>
+
+<% @ccrs.each do |ccr| %>
+  <p>ID: <%= ccr.id %></p>
+  <p>Association Management ID: <%= ccr.association_management_id %></p>
+  <p>Section: <%= ccr.section %></p>
+  <p>Description: <%= ccr.description %></p>
+  <p>Status: <%= ccr.status %></p>
+  <p>Date Proposed: <%= ccr.date_proposed %></p>
+  <p>Date Approved: <%= ccr.date_approved %></p>
+
+<% end %>
