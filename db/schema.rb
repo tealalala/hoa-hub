@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_14_183754) do
+ActiveRecord::Schema.define(version: 2018_11_15_002318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,13 +32,23 @@ ActiveRecord::Schema.define(version: 2018_11_14_183754) do
     t.integer "ccr_id"
   end
 
+  create_table "association_managements", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.integer "zip_code"
+  end
+
   create_table "association_roles", force: :cascade do |t|
     t.string "status"
     t.string "start_date"
     t.string "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "association_id"
+    t.integer "association_management_id"
     t.integer "user_id"
     t.integer "role_id"
     t.integer "group_id"
@@ -62,7 +72,7 @@ ActiveRecord::Schema.define(version: 2018_11_14_183754) do
     t.date "date_approved"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "association_id"
+    t.integer "association_management_id"
     t.integer "user_id"
   end
 
@@ -74,7 +84,7 @@ ActiveRecord::Schema.define(version: 2018_11_14_183754) do
     t.boolean "status", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "association_id"
+    t.integer "association_management_id"
     t.integer "user_id"
   end
 
@@ -91,7 +101,7 @@ ActiveRecord::Schema.define(version: 2018_11_14_183754) do
     t.integer "zip_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "association_id"
+    t.integer "association_management_id"
     t.integer "user_id"
   end
 

@@ -1,0 +1,8 @@
+json.id association_management.id
+json.name association_management.name
+json.address association_management.address
+json.city association_management.city
+json.state association_management.state
+json.zip_code association_management.zip_code
+json.created_at association_management.created_at
+json.updated_at association_management.updated_at
