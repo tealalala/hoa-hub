@@ -4,7 +4,7 @@ json.description ccr.description
 json.status ccr.status
 json.date_proposed ccr.date_proposed
 json.date_approved ccr.date_approved
-json.association_id ccr.association_id
+json.association_id ccr.association_management_id
 json.user_id ccr.user_id
 json.created_at ccr.created_at
 json.updated_at ccr.updated_at

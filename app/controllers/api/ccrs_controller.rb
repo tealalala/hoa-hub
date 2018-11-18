@@ -11,7 +11,7 @@ class Api::CcrsController < ApplicationController
       date_proposed: Date.parse(params[:date_proposed]),
       date_approved: Date.parse(params[:date_approved]),
       status: false,
-      association_id: params[:association_id],
+      association_management_id: params[:association_management_id],
       user_id: params[:user_id]
     )
     @ccr.save
@@ -31,7 +31,7 @@ class Api::CcrsController < ApplicationController
       date_proposed: Date.parse(params[:date_proposed]),
       date_approved: Date.parse(params[:date_approved]),
       status: false,
-      association_id: params[:association_id],
+      association_management_id: params[:association_management_id],
       user_id: params[:user_id]
     )
     @ccr.save

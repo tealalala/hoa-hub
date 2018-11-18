@@ -5,5 +5,5 @@ json.state property_address.state
 json.zip_code property_address.zip_code
 json.created_at property_address.created_at
 json.updated_at property_address.updated_at
-json.association_id property_address.association_id
+json.association_management_id property_address.association_management_id
 json.user_id property_address.user_id

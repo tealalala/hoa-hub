@@ -4,7 +4,7 @@ json.description bylaw.description
 json.status bylaw.status
 json.date_proposed bylaw.date_proposed
 json.date_approved bylaw.date_approved
-json.association_id bylaw.association_id
+json.association_id bylaw.association_management_id
 json.user_id bylaw.user_id
 json.created_at bylaw.created_at
 json.updated_at bylaw.updated_at

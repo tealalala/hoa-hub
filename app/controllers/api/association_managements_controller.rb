@@ -12,6 +12,7 @@ class Api::AssociationManagementsController < ApplicationController
       state: params[:state],
       zip_code: params[:zip_code]
     )
+    @association_management.errors.full_messages
     @association_management.save
     render 'show.json.jbuilder'
   end

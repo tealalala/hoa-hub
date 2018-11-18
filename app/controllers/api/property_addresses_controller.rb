@@ -10,7 +10,7 @@ class Api::PropertyAddressesController < ApplicationController
       city: params[:city],
       state: params[:state],
       zip_code: params[:zip_code],
-      association_id: params[:association_id],
+      association_management_id: params[:association_management_id],
       user_id: params[:user_id]
     )
     @property_address.save
@@ -29,7 +29,7 @@ class Api::PropertyAddressesController < ApplicationController
       city: params[:city],
       state: params[:state],
       zip_code: params[:zip_code],
-      association_id: params[:association_id],
+      association_management_id: params[:association_management_id],
       user_id: params[:user_id]
     )
     @property_address.save

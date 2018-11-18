@@ -1,4 +1,4 @@
-class ActionMadeByAddressUser < ApplicationRecord
+class ActionByAddressUser < ApplicationRecord
   # Database Relationships
   belongs_to :bylaw, optional: true
   belongs_to :ccr, optional: true

@@ -10,7 +10,7 @@ class Api::ActionByAddressUsersController < ApplicationController
       description: params[:description],
       status: params[:status],
       date_open: Date.parse(params[:date_open]),
-      date_closed: Date.parse(params[:date_closed]),
+      # date_closed: Date.parse(params[:date_closed]),
       architecture_change_is_true?: params[:architecture?],
       violation_is_true?: params[:violation?],
       vote_is_true?: params[:vote?],
