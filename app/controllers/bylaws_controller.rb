@@ -1,0 +1,2 @@
+class BylawsController < ApplicationController
+end

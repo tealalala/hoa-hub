@@ -1,0 +1,8 @@
+<h1>New CCR</h1>
+
+<%= form_tag "/ccrs", method: :post do %>
+  <p>Section: <input type="text" name="section"></p>
+  <p>Description: <input type="text" name="description"></p>
+  <p>Date Proposed: <input type="text" name="date_proposed"></p>
+  <p><input type="submit" value="Submit a CCR"></p>
+<% end %>

@@ -1,0 +1,8 @@
+<h1>Edit CCR</h1>
+
+<form action="/ccrs/<%= @ccr.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <p>Section: <input type="text" name="section"></p>
+  <p>Description: <input type="text" name="description"></p>
+  <p><input type="submit" value="Submit an Edit to CCR"></p>
+</form>

@@ -2,8 +2,11 @@ Rails.application.routes.draw do
   # STEP 1: A ROUTE triggers a controller action
   # verb "/urls" => "namespace/controllers#action"
 
-  get '/ccrs' => 'ccrs#index'
+  # Unnamespaced - Front-end with Embedded Ruby (.html.erb)
+  resources :bylaws
+  resources :ccrs
 
+  # Namespaced 'api' - App Data (.json.jbuilder)
   namespace :api do
     resources :users, except: [:new, :edit]
     resources :action_by_address_users
