@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # Namespaced 'api' - App Data (.json.jbuilder)
   namespace :api do
     resources :users, except: [:new, :edit]
+    resources :sessions, only: :create
     resources :action_by_address_users
     resources :association_managements
     resources :association_roles
