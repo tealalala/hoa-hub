@@ -1,7 +1,12 @@
 class Api::ActionByAddressUsersController < ApplicationController
+  before_action :authenticate_user
+  
   def index
     @action_by_users = ActionByAddressUser.order("id ASC").all
     render 'index.json.jbuilder'
+
+    p 'current_user___' * 10
+    p current_user
   end
 
   def create
