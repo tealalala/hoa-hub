@@ -10,3 +10,4 @@ json.created_at user.created_at
 json.updated_at user.updated_at
 json.association_role_id user.association_role_id
 json.property_address_id user.property_address_id
+json.action_by_address_user user.action_by_address_users
