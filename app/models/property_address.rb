@@ -1,6 +1,6 @@
 class PropertyAddress < ApplicationRecord
   # Database Relationships
-  has_many :action_made_by_address_users
+  has_many :action_by_address_users
   belongs_to :user
 
   # Data Validations
