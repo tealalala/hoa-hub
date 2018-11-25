@@ -1,6 +1,6 @@
 class Api::ActionByAddressUsersController < ApplicationController
   before_action :authenticate_user
-  
+
   def index
     @action_by_users = ActionByAddressUser.order("id ASC").all
     render 'index.json.jbuilder'

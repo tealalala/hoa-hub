@@ -1,4 +1,6 @@
 class Api::UsersController < ApplicationController
+  before_action :authenticate_user, only: :show
+  
   def index
     @users = User.order("id ASC").all
     render 'index.json.jbuilder'
