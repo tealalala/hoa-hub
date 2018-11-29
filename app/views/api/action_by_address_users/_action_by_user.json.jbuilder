@@ -4,9 +4,9 @@ json.description action_by_user.description
 json.status action_by_user.status
 json.date_open action_by_user.date_open
 json.date_closed action_by_user.date_closed
-json.architecture_change_is_true? action_by_user.architecture_change_is_true?
-json.violation_is_true? action_by_user.violation_is_true?
-json.vote_is_true? action_by_user.vote_is_true?
+json.is_architecture action_by_user.is_architecture
+json.is_violation action_by_user.is_violation
+json.is_vote action_by_user.is_vote
 json.user_id action_by_user.user_id
 json.property_address_id action_by_user.property_address_id
 json.bylaw_id action_by_user.bylaw_id
