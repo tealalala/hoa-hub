@@ -1,12 +1,22 @@
 class Api::ActionByAddressUsersController < ApplicationController
-  before_action :authenticate_user
+  before_action :authenticate_user, only: [:index, :create, :show, :destroy]
 
   def index
-    @action_by_users = ActionByAddressUser.order("id ASC").all
-    render 'index.json.jbuilder'
-
     p 'current_user___' * 10
     p current_user
+
+    # @action_by_users = ActionByAddressUser.order("id ASC").all
+    # render 'index.json.jbuilder'
+
+    # @action_by_users = ActionByAddressUser.where(user_id: current_user.id)
+    # render 'index.json.jbuilder'
+
+    if current_user
+      @action_by_users = ActionByAddressUser.where(user_id: current_user.id)
+      render 'index.json.jbuilder'
+    else
+      render []
+    end
   end
 
   def create
