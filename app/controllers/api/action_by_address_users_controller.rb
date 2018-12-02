@@ -70,8 +70,12 @@ class Api::ActionByAddressUsersController < ApplicationController
   end
 
   def filtered_actions_vote_is_true_index
-    @action_by_users = ActionByAddressUser.where(is_vote: true)
-    render 'filtered_actions_vote_is_true.json.jbuilder'
+    if current_user
+      @action_by_users = ActionByAddressUser.where(is_vote: true).where.not(bylaw_id: nil)
+      render 'filtered_actions_vote_is_true.json.jbuilder'
+    else
+      render []
+    end
   end
 
 end
