@@ -1,5 +1,5 @@
 class Api::ActionByAddressUsersController < ApplicationController
-  before_action :authenticate_user, only: [:index, :create, :show, :destroy]
+  # before_action :authenticate_user, only: [:index, :create, :show, :destroy]
 
   def index
     p 'current_user___' * 10
@@ -68,4 +68,10 @@ class Api::ActionByAddressUsersController < ApplicationController
     @action_by_user.destroy
     render 'destroy.json.jbuilder'
   end
+
+  def filtered_actions_vote_is_true_index
+    @action_by_users = ActionByAddressUser.where(is_vote: true)
+    render 'filtered_actions_vote_is_true.json.jbuilder'
+  end
+
 end

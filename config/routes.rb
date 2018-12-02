@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :bylaws
   resources :ccrs
 
-  # Namespaced 'api' - App Data (.json.jbuilder)
+  # RESTful Routes - Namespaced 'api' - App Data (.json.jbuilder)
   namespace :api do
     resources :users
     resources :sessions, only: :create
@@ -19,5 +19,11 @@ Rails.application.routes.draw do
     resources :groups
     resources :property_addresses
     resources :roles
+  end
+
+  # non-RESTful Routes - Namespaced 'api' - App Data (.json.jbuilder)
+  namespace :api do
+    # action_by_address_users
+    get '/filtered_actions_vote_is_true' => 'action_by_address_users#filtered_actions_vote_is_true_index'
   end
 end
