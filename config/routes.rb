@@ -25,5 +25,8 @@ Rails.application.routes.draw do
   namespace :api do
     # action_by_address_users
     get '/filtered_actions_vote_is_true' => 'action_by_address_users#filtered_actions_vote_is_true_index'
+
+    # bylaws
+    get '/filtered_bylaws_is_false' => 'bylaws#filtered_bylaws_is_false_index'
   end
 end

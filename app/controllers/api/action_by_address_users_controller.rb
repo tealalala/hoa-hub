@@ -24,7 +24,7 @@ class Api::ActionByAddressUsersController < ApplicationController
       category: params[:category],
       description: params[:description],
       status: params[:status],
-      date_open: Date.parse(params[:date_open]),
+      date_open: params[:date_open],
       # date_closed: Date.parse(params[:date_closed]),
       is_architecture: params[:is_architecture],
       is_violation: params[:is_violation],
@@ -70,12 +70,14 @@ class Api::ActionByAddressUsersController < ApplicationController
   end
 
   def filtered_actions_vote_is_true_index
-    if current_user
-      @action_by_users = ActionByAddressUser.where(is_vote: true).where.not(bylaw_id: nil)
+    # if current_user
+      @action_by_users = ActionByAddressUser
+        .where(is_vote: true)
+        # .where.not(bylaw_id: nil)
       render 'filtered_actions_vote_is_true.json.jbuilder'
-    else
-      render []
-    end
+    # else
+    #   render []
+    # end
   end
 
 end
