@@ -69,6 +69,15 @@ class Api::ActionByAddressUsersController < ApplicationController
     render 'destroy.json.jbuilder'
   end
 
+  def filtered_architecture_is_true_index
+    if current_user
+      @action_by_users = current_user.action_by_address_users.where(is_architecture: true)
+      render 'filtered_architecture_is_true.json.jbuilder'
+    else
+      render []
+    end
+  end
+
   def filtered_vote_is_true_index
     # if current_user
       @action_by_users = ActionByAddressUser.where(is_vote: true)
@@ -81,7 +90,6 @@ class Api::ActionByAddressUsersController < ApplicationController
 
   def filtered_violations_is_true_index
     if current_user
-      # @action_by_users = ActionByAddressUser.where(is_violation: true)
       @action_by_users = current_user.action_by_address_users.where(is_violation: true)
       render 'filtered_violations_is_true.json.jbuilder'
     else

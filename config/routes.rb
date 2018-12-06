@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   # non-RESTful Routes - Namespaced 'api' - App Data (.json.jbuilder)
   namespace :api do
     # action_by_address_users
+    get '/filtered_architecture_is_true' => 'action_by_address_users#filtered_architecture_is_true_index'
     get '/filtered_vote_is_true' => 'action_by_address_users#filtered_vote_is_true_index'
     get '/filtered_violations_is_true' => 'action_by_address_users#filtered_violations_is_true_index'
 
