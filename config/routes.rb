@@ -28,5 +28,10 @@ Rails.application.routes.draw do
 
     # bylaws
     get '/filtered_bylaws_is_false' => 'bylaws#filtered_bylaws_is_false_index'
+    get '/filtered_bylaws_is_true' => 'bylaws#filtered_bylaws_is_true_index'
+
+    # ccrs
+    get '/filtered_ccrs_is_false' => 'ccrs#filtered_ccrs_is_false_index'
+    get '/filtered_ccrs_is_true' => 'ccrs#filtered_ccrs_is_true_index'
   end
 end

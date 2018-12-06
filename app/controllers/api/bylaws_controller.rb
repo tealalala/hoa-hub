@@ -44,6 +44,11 @@ class Api::BylawsController < ApplicationController
     render 'destroy.json.jbuilder'
   end
 
+  def filtered_bylaws_is_true_index
+    @is_true_bylaws = Bylaw.where(status: true)
+    render 'filtered_bylaws_is_true_index.json.jbuilder'
+  end
+
   def filtered_bylaws_is_false_index
     @is_false_bylaws = Bylaw.where(status: false)
     render 'filtered_bylaws_is_false_index.json.jbuilder'

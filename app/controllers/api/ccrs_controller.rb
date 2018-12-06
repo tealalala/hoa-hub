@@ -43,4 +43,14 @@ class Api::CcrsController < ApplicationController
     @ccr.destroy
     render 'destroy.json.jbuilder'
   end
+
+  def filtered_ccrs_is_true_index
+    @is_true_ccrs = Ccr.where(status: true)
+    render 'filtered_ccrs_is_true_index.json.jbuilder'
+  end
+
+  def filtered_ccrs_is_false_index
+    @is_false_ccrs = Ccr.where(status: false)
+    render 'filtered_ccrs_is_false_index.json.jbuilder'
+  end
 end
