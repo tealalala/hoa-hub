@@ -1,4 +1,6 @@
 class Api::CcrsController < ApplicationController
+  before_action :authenticate_user, only: [:create, :index, :show]
+  
   def index
     @ccrs = Ccr.order("id ASC").all
     render 'index.json.jbuilder'

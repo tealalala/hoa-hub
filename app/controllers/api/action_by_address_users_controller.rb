@@ -1,5 +1,5 @@
 class Api::ActionByAddressUsersController < ApplicationController
-  # before_action :authenticate_user, only: [:index, :create, :show, :destroy]
+  before_action :authenticate_user, only: [:index, :create, :show, :destroy, :filtered_actions_vote_is_true_index]
 
   def index
     p 'current_user___' * 10
@@ -69,12 +69,23 @@ class Api::ActionByAddressUsersController < ApplicationController
     render 'destroy.json.jbuilder'
   end
 
-  def filtered_actions_vote_is_true_index
+  def filtered_vote_is_true_index
     # if current_user
       @action_by_users = ActionByAddressUser
         .where(is_vote: true)
         # .where.not(bylaw_id: nil)
-      render 'filtered_actions_vote_is_true.json.jbuilder'
+      render 'filtered_vote_is_true.json.jbuilder'
+    # else
+    #   render []
+    # end
+  end
+
+  def filtered_violations_is_true_index
+    # if current_user
+      @action_by_users = ActionByAddressUser
+        .where(is_violation: true)
+        # .where.not(bylaw_id: nil)
+      render 'filtered_violations_is_true.json.jbuilder'
     # else
     #   render []
     # end

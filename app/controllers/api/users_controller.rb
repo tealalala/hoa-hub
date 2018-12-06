@@ -1,7 +1,9 @@
 class Api::UsersController < ApplicationController
-  before_action :authenticate_user, only: :show
-  
+  before_action :authenticate_user, only: [:index, :show]
+
   def index
+    p 'current_user ' * 10
+    p current_user
     @users = User.order("id ASC").all
     render 'index.json.jbuilder'
   end
@@ -39,8 +41,16 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: params[:id])
+    # @user = User.find_by(id: params[:id])
+    p 'current_user ' * 10
+    p current_user
+    @user = User.find_by(id: current_user.id)
     render 'show.json.jbuilder'
+
+    # if current_user
+    # else
+    #   render []
+    # end
   end
 
   def update
