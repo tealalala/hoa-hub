@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'google-api-client', :require => 'google/api_client'
+
 gem 'rack-cors', require: 'rack/cors'
 
 gem 'faker'

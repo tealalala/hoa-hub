@@ -25,3 +25,11 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore calendar credentials and other stuff
+/config/credentials.json
+/config/quickstart.rb
+
+# Ignore tokens
+/config/token.yaml
+/config/credentials.yml.enc
