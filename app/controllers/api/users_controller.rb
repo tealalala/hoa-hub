@@ -1,10 +1,11 @@
 class Api::UsersController < ApplicationController
-  before_action :authenticate_user, only: [:index, :show]
+  before_action :authenticate_user, only: [:create, :index, :show]
 
   def index
     p 'current_user ' * 10
     p current_user
-    @users = User.order("id ASC").all
+    # @users = User.order("id ASC").all
+    @users = current_user.users
     render 'index.json.jbuilder'
   end
 
