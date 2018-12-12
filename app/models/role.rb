@@ -1,7 +1,7 @@
 class Role < ApplicationRecord
   # Database Relationships
-  belongs_to :association_role
+  # belongs_to :association_role
 
   # Data Validations
-  validates :name, :presence => true, :uniqueness => true
+  # validates :name, :presence => true, :uniqueness => true
 end

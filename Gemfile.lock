@@ -217,6 +217,7 @@ DEPENDENCIES
   byebug
   faker
   google-api-client
+  googleauth
   http
   jbuilder (~> 2.5)
   jwt
