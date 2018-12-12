@@ -28,6 +28,9 @@ Rails.application.routes.draw do
     get '/filtered_vote_is_true' => 'action_by_address_users#filtered_vote_is_true_index'
     get '/filtered_violations_is_true' => 'action_by_address_users#filtered_violations_is_true_index'
 
+    # association roles
+    get '/filtered_board_is_true' => 'association_roles#filtered_board_is_true_index'
+    
     # bylaws
     get '/filtered_bylaws_is_false' => 'bylaws#filtered_bylaws_is_false_index'
     get '/filtered_bylaws_is_true' => 'bylaws#filtered_bylaws_is_true_index'
@@ -35,5 +38,6 @@ Rails.application.routes.draw do
     # ccrs
     get '/filtered_ccrs_is_false' => 'ccrs#filtered_ccrs_is_false_index'
     get '/filtered_ccrs_is_true' => 'ccrs#filtered_ccrs_is_true_index'
+
   end
 end

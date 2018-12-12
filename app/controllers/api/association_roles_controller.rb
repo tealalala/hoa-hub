@@ -43,4 +43,10 @@ class Api::AssociationRolesController < ApplicationController
     @association_role.destroy
     render 'destroy.json.jbuilder'
   end
+
+  def filtered_board_is_true_index
+    @is_true_boards = AssociationRole.where(status: true)
+    render 'filtered_board_is_true_index.json.jbuilder'
+  end
+
 end
