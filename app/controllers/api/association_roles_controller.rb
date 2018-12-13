@@ -45,7 +45,7 @@ class Api::AssociationRolesController < ApplicationController
   end
 
   def filtered_board_is_true_index
-    @is_true_boards = AssociationRole.where(status: true)
+    @is_true_boards = AssociationRole.where(status: true).where(association_id: 1)
     render 'filtered_board_is_true_index.json.jbuilder'
   end
 
