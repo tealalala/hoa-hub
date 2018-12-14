@@ -29,8 +29,8 @@ class Api::ActionByAddressUsersController < ApplicationController
       is_architecture: params[:is_architecture],
       is_violation: params[:is_violation],
       is_vote: params[:is_vote],
-      user_id: params[:user_id],
-      property_address_id: params[:property_address_id],
+      user_id: 127,
+      property_address_id: 1,
       bylaw_id: params[:bylaw_id],
       ccr_id: params[:ccr_id]
     )
@@ -55,7 +55,7 @@ class Api::ActionByAddressUsersController < ApplicationController
       is_violation: params[:is_violation],
       is_vote: params[:is_vote],
       user_id: params[:user_id],
-      property_address_id: params[:property_address_id],
+      property_address_id: current_user.property_address_id,
       bylaw_id: params[:bylaw_id],
       ccr_id: params[:ccr_id]
     )

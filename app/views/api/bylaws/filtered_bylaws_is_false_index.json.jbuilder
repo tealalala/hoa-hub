@@ -1,7 +1,7 @@
-json.array! @is_false_bylaws do |is_false_bylaw|
-  json.id is_false_bylaw.id
-  json.status is_false_bylaw.status
-  json.section is_false_bylaw.section
-  json.description is_false_bylaw.description
-  json.date_proposed is_false_bylaw.date_proposed
+json.array! @current_user_to_be_voted_on do |current_user_to_be_voted_on|
+  json.id current_user_to_be_voted_on.id
+  json.status current_user_to_be_voted_on.status
+  json.section current_user_to_be_voted_on.section
+  json.description current_user_to_be_voted_on.description
+  json.date_proposed current_user_to_be_voted_on.date_proposed
 end

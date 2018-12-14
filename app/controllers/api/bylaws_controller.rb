@@ -58,7 +58,8 @@ class Api::BylawsController < ApplicationController
   end
 
   def filtered_bylaws_is_false_index
-    @is_false_bylaws = Bylaw.where(status: false)
+    # @is_false_bylaws = Bylaw.where(status: false)
+    @current_user_to_be_voted_on = current_user.bylaws_to_be_voted_on
     render 'filtered_bylaws_is_false_index.json.jbuilder'
   end
 end
