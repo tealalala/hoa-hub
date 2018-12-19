@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_19_031358) do
+ActiveRecord::Schema.define(version: 2018_12_19_032154) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 2018_12_19_031358) do
     t.integer "user_id"
     t.string "article"
     t.string "header"
+    t.integer "subsection"
   end
 
   create_table "groups", force: :cascade do |t|
