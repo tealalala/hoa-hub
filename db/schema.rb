@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_12_021224) do
+ActiveRecord::Schema.define(version: 2018_12_19_022815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2018_12_12_021224) do
   end
 
   create_table "bylaws", force: :cascade do |t|
-    t.string "section"
+    t.integer "section"
     t.string "description"
     t.boolean "status", default: false
     t.date "date_proposed"
@@ -64,6 +64,8 @@ ActiveRecord::Schema.define(version: 2018_12_12_021224) do
     t.datetime "updated_at", null: false
     t.integer "association_management_id"
     t.integer "user_id"
+    t.string "article"
+    t.string "header"
   end
 
   create_table "ccrs", force: :cascade do |t|

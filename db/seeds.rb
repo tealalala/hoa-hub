@@ -22,35 +22,35 @@
 # end
 
 
-5.times do
-  PropertyAddress.create(
-    address: Faker::Address.street_address,
-    city: "Sacramento",
-    state: "California",
-    zip_code: "94203",
-    association_management_id: 2,
-    user_id: 1
-  )
-end
-
-5.times do
-  PropertyAddress.create(
-    address: Faker::Address.street_address,
-    city: "San Diego",
-    state: "California",
-    zip_code: "92101",
-    association_management_id: 3,
-    user_id: 1
-  )
-end
-
-5.times do
-  PropertyAddress.create(
-    address: Faker::Address.street_address,
-    city: "San Francisco",
-    state: "California",
-    zip_code: "94123",
-    association_management_id: 1,
-    user_id: 1
-  )
-end
+# 5.times do
+#   PropertyAddress.create(
+#     address: Faker::Address.street_address,
+#     city: "Sacramento",
+#     state: "California",
+#     zip_code: "94203",
+#     association_management_id: 2,
+#     user_id: 1
+#   )
+# end
+#
+# 5.times do
+#   PropertyAddress.create(
+#     address: Faker::Address.street_address,
+#     city: "San Diego",
+#     state: "California",
+#     zip_code: "92101",
+#     association_management_id: 3,
+#     user_id: 1
+#   )
+# end
+#
+# 5.times do
+#   PropertyAddress.create(
+#     address: Faker::Address.street_address,
+#     city: "San Francisco",
+#     state: "California",
+#     zip_code: "94123",
+#     association_management_id: 1,
+#     user_id: 1
+#   )
+# end
