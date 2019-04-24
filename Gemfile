@@ -12,6 +12,9 @@ gem 'rack-cors', require: 'rack/cors'
 # Bundler gem
 gem 'bundler', '~> 1.17', '>= 1.17.3'
 
+gem "railties", ">= 5.2.2.1"
+gem "actionview", ">= 5.2.2.1"
+
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
