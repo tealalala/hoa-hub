@@ -1,24 +1,4 @@
-# README
+# HOAHub
+A homeowner association relationship management system for both Association Administrators and Homeowner users to engage meaningfully regarding the association and neighborhood.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This app helps Association Administrators to organize the various neighborhoods they manage, and the Homeowner users to connect with the Association management.
